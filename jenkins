@@ -6,10 +6,7 @@ pipeline {
     }
     stages
     {
-        stage("Cleanup workspace") {
-            steps {
-                cleanWs()
-            }
+        
             stage("Checkout from SCM") {
                 steps {
                     git branch: 'main', credentialId: 'github', url: 'https://github.com/Anil-Gupta/register-app'
